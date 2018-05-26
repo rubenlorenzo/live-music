@@ -1,7 +1,7 @@
 {
-  "name": "vue-clean",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "vuetube",
+  "version": "0.0.2",
+  "description": " Video resources that will help you to improve your Vue skills",
   "author": "Firmino Changani <flowck96@gmail.com>",
   "private": true,
   "scripts": {
