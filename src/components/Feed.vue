@@ -16,7 +16,7 @@
     </ul>
     <div class="space"></div>
     <!-- Videos -->
-    <div class="listing">
+    <div class="listing" v-show="!loading">
       <article class="video" v-for="video in videos" :key="video.snippet.id">
         <router-link
           :to="{ name: 'Player', params: { id: video.id.videoId }}"
@@ -40,6 +40,10 @@
         </div>
       </article>
     </div>
+
+    <div class="loading" v-show="loading">
+      <article v-for="fake in [1, 2, 3, 4, 5, 6, 7, 8]"></article>
+    </div>
   </div>
 </template>
 
@@ -53,6 +57,7 @@ export default {
       err: '',
       videos: [],
       tags: [],
+      loading: true,
     };
   },
   computed: {
@@ -60,7 +65,6 @@ export default {
       let tags = '';
       // Check if is the last iteration, to avoid adding another +
       this.tags.forEach((tag, i) => {
-        console.log(i);
         if ((i + 1) === this.tags.length) {
           tags += tag;
         } else {
@@ -72,6 +76,7 @@ export default {
   },
   filters: {
     date(value) {
+      // Formate the date field
       return moment(value).fromNow();
     },
   },
@@ -90,11 +95,12 @@ export default {
         .then(response => response.json())
         .then((json) => {
           this.videos = json.items;
-          // console.log(this.videos);
+          this.loading = false;
         })
         .catch((err) => { this.err = err; });
     },
     setTag(event) {
+      this.loading = true;
       const tagName = event.target.innerHTML;
       // Chech if the tags is active by checking the classname
       if (event.target.classList.value === "") {
@@ -110,7 +116,6 @@ export default {
             this.tags.splice(i, 1);
           }
         });
-        console.log(this.tags);
         event.target.classList.remove('tag-on');
         this.getVideos();
       }
@@ -120,15 +125,17 @@ export default {
 </script>
 
 <style>
-  .listing{
+  .listing,
+  .loading{
     width: 100%;
-    min-height: 100%;
     display: flex;
     flex-wrap: wrap;
+    min-height: 100%;
     justify-content: space-between;
   }
 
-  .video{
+  .video,
+  .loading article{
     width: 32%;
     position: relative;
     margin-bottom: 35px;
@@ -137,8 +144,8 @@ export default {
 
   .video::before,
   .video::after{
-    bottom: 0;
     width: 0%;
+    bottom: 0;
     height: 4px;
     content: "";
     position: absolute;
@@ -205,5 +212,35 @@ export default {
   .tags li:hover,
   .tag-on{
     background-color: #333 !important;
+  }
+
+  .loading{
+    animation: loadingAnimation infinite .8s;
+  }
+
+  .loading article{
+    height: 140px;
+    position: relative;
+    margin-bottom: 50px;
+    background-color: #DDD;
+  }
+
+  @keyframes loadingAnimation{
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  .loading article:before{
+    width: 100%;
+    content: "";
+    height: 10px;
+    bottom: -20px;
+    position: absolute;
+    background-color: #DDD;
   }
 </style>
