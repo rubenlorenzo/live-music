@@ -34,6 +34,13 @@ export default {
 <style>
   .player iframe{
     width: 100%;
-    height: 460px
+    height: 560px;
+    background-color: #DDD;
+  }
+
+  @media screen and (max-width: 450px) {
+    .player iframe {
+      height: 200px;
+    }
   }
 </style>

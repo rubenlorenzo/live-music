@@ -38,8 +38,8 @@ export default {
     setTimeout(() => {
       // Add the class slidedown in the header
       document.querySelector(".spot")
-      .classList.add('slidedown');
-    }, 500)
+        .classList.add('slidedown');
+    }, 500);
   },
 };
 </script>

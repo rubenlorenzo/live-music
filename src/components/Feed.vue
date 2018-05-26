@@ -42,7 +42,7 @@
     </div>
 
     <div class="loading" v-show="loading">
-      <article v-for="fake in [1, 2, 3, 4, 5, 6, 7, 8]"></article>
+      <article v-for="fake in [1, 2, 3, 4, 5, 6, 7, 8]" :key="fake.id"></article>
     </div>
   </div>
 </template>
@@ -242,5 +242,26 @@ export default {
     bottom: -20px;
     position: absolute;
     background-color: #DDD;
+  }
+
+  @media screen and (max-width: 450px) {
+    .wrap{
+      width: 90%;
+    }
+
+    .video,
+    .loading article{
+      width: 100%
+    }
+
+    .tags{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .tags li{
+      margin-bottom: 10px;
+    }
   }
 </style>
