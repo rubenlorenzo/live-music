@@ -1,6 +1,6 @@
-# vue-clean
+# vuetube
 
-> A Vue.js project
+A SPA that fetch Video resources from Youtube using Youtube Data API 3 and Vuejs for the rendering part.
 
 ## Build Setup
 
