@@ -21,7 +21,7 @@
         </p>
       </div>
     </div>
-    <div class="wrap root">
+    <div class="wrap root view">
       <router-view></router-view>
     </div>
   </div>
@@ -32,6 +32,14 @@ export default {
   name: 'App',
   data() {
     return {};
+  },
+  mounted() {
+    // Wait for 500ms after mount the component
+    setTimeout(() => {
+      // Add the class slidedown in the header
+      document.querySelector(".spot")
+      .classList.add('slidedown');
+    }, 500)
   },
 };
 </script>
@@ -66,12 +74,17 @@ export default {
   }
 
   .spot{
+    top: 0;
+    left: 0;
     width: 100%;
     height: 300px;
     display: flex;
+    position: absolute;
     text-align: center;
     align-items: center;
     background-color: #333;
+    transition: transform .3s;
+    transform: translateY(-300px);
   }
 
   .spot{
@@ -91,6 +104,10 @@ export default {
     color: #FFF;
   }
 
+  .slidedown{
+    transform: translateY(0);
+  }
+
   .space{
     width: 100%;
     height: 20px;
@@ -98,6 +115,10 @@ export default {
 
   .space.single{
     height: 10px;
+  }
+
+  .view{
+    margin-top: 300px;
   }
 </style>
 
