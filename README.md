@@ -28,8 +28,14 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## TODO
 
-[ ] - Component that will show / list trending videos
-[ ] - Component that will play the video
+[x] - Component that will show / list trending videos
 
-[ ] - Request videos from youtu be API
-[ ] - Get informations of a single video
+[x] - Component that will play the video
+
+[x] - Request videos from youtu be API
+
+[x] - Get informations of a single video
+
+[ ] - Test components
+
+[ ] - Animations
