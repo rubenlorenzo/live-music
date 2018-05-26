@@ -2,16 +2,22 @@
   <div class="root">
     <div class="spot">
       <div class="wrap">
-        <router-link to="/">
-          <h1>vuetube</h1>
-        </router-link>
+        <h1>
+          <router-link to="/" title="vuetube">
+            vuetube ▶
+          </router-link>
+        </h1>
         <div class="space single"></div>
         <p>Video resources that will help you to improve your Vue skills</p>
         <div class="space"></div>
         <div class="space"></div>
         <p class="note">
           By <a target="_blank" href="http://firmino.engineer">Firmino Changani</a>
-          &nbsp;-&nbsp; Want to improve? Contribute <a target="_blank" href="#">here</a>
+          &nbsp;-&nbsp;
+          Want to improve?
+          <a target="_blank" href="https://github.com/flowck/vuetube">
+            Fork here
+          </a>
         </p>
       </div>
     </div>
@@ -63,22 +69,26 @@ export default {
     width: 100%;
     height: 300px;
     display: flex;
-    align-items: center;
     text-align: center;
+    align-items: center;
     background-color: #333;
   }
 
-  .spot,
-  .spot a{
+  .spot{
     color: #FFF;
   }
 
-  .spot h1{
+  .spot h1 a{
     font-size: 50px;
   }
 
-  header{
-    text-align: center;
+  .spot a{
+    color: #5bc498;
+    text-decoration: none;
+  }
+
+  .spot a:hover{
+    color: #FFF;
   }
 
   .space{
@@ -88,24 +98,6 @@ export default {
 
   .space.single{
     height: 10px;
-  }
-
-  footer{
-    width: 100%;
-    height: 20px;
-    padding: 15px 0;
-    background-color: #333;
-  }
-
-  footer .wrap{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  footer,
-  footer a{
-    color: #FFF;
-    font-size: 14px;
   }
 </style>
 
