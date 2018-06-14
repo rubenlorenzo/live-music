@@ -46,7 +46,7 @@ export default {
   }
 
   body{
-    background-color: #EEE;
+    background-color: #000000;
     font-family: 'Roboto', 'sans-serif';
   }
 
@@ -72,13 +72,13 @@ export default {
     position: absolute;
     text-align: center;
     align-items: center;
-    background-color: #333;
+    background-color: #bb6b6b;
     transition: transform .3s;
     transform: translateY(-300px);
   }
 
   .spot{
-    color: #FFF;
+    color: #ffffff;
   }
 
   .spot h1 a{
@@ -86,12 +86,12 @@ export default {
   }
 
   .spot a{
-    color: #5bc498;
+    color: #e9f1ed;
     text-decoration: none;
   }
 
   .spot a:hover{
-    color: #FFF;
+    color: #dfb8b8;
   }
 
   .slidedown{

@@ -150,7 +150,7 @@ export default {
     content: "";
     position: absolute;
     transition: width .5s;
-    background-color: #5bc498;
+    background-color: #dfb8b8;
   }
 
   .video::before{
@@ -186,12 +186,12 @@ export default {
   }
 
   .video .meta a{
-    color: #333;
+    color: #e9f1ed;
     text-decoration: none;
   }
 
   .video:hover .meta a{
-    color: #5bc498;
+    color: #dfb8b8;
   }
 
   /* Tags */
