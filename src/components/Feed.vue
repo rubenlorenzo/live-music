@@ -3,7 +3,7 @@
     <div class="space"></div>
     <div class="space"></div>
     <!-- Tags -->
-    <ul class="tags">
+    <!-- <ul class="tags">
       <li v-on:click="setTag">vuex</li>
       <li v-on:click="setTag">tutorial</li>
       <li v-on:click="setTag">talks</li>
@@ -13,7 +13,7 @@
       <li v-on:click="setTag">vue-router</li>
       <li v-on:click="setTag">vue-material</li>
       <li v-on:click="setTag">nuxt</li>
-    </ul>
+    </ul> -->
     <div class="space"></div>
     <!-- Videos -->
     <div class="listing" v-show="!loading">
