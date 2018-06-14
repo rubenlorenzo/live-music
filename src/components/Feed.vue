@@ -87,7 +87,7 @@ export default {
     getVideos() {
       // Config options
       const KEY = 'AIzaSyBlSc4Zavlls-c_K2cESn1jyuiUSckHgwM';
-      const OPTS = `part=snippet&type=video&q=vuejs${this.genTags}&maxResults=50`;
+      const OPTS = `part=snippet&type=video&q=6+Music+Live+Room NPR+Music+Tiny+Desk+Concert Live+on+KEXP${this.genTags}&maxResults=50`;
       const BASE_URL = `https://www.googleapis.com/youtube/v3/search?&${OPTS}&key=${KEY}`;
 
       // Get request to youtube API
