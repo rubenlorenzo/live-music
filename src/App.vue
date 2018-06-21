@@ -1,14 +1,22 @@
 <template>
   <div class="root">
     <div class="spot">
-      <div class="wrap">
-        <h1>
-          <router-link to="/" title="vuetube">
-            Live music on the Radio ▶
-          </router-link>
-        </h1>
-        <div class="space single"></div>
-        <p>Live music on international radio</p>        
+      <div class="wrap" id="header">
+        <div id="subheader">
+            <div id="logo">
+            <img src="../static/live-music.jpg" alt="">
+          </div>      
+          <div id="title">        
+            <h1>
+              <router-link to="/" title="vuetube">
+                Live music <span><img src="../static/radio.png" alt=""></span>
+              </router-link>
+            </h1>                 
+          </div>
+        </div>
+        <div class="space_single">
+              <p>Live music on international radio</p>
+        </div>             
       </div>
     </div>
     <div class="wrap root view">
@@ -52,6 +60,7 @@ export default {
 
   h1, h2, h3, h4, h5, h6, b, strong{
     font-weight: 500;
+    
   }
 
   a{
@@ -59,41 +68,95 @@ export default {
   }
 
   .wrap{
-    width: 70%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 auto;    
   }
 
   .spot{
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    margin: auto;
+    height: 230px;
     display: flex;
-    position: absolute;
-    text-align: center;
+    position: absolute;     
     align-items: center;
-    background-color: #bb6b6b;
+    background-color:#000000;
     transition: transform .3s;
-    transform: translateY(-300px);
+    transform: translateY(-300px);      
+    color: #ffffff;       
+    text-shadow:
+   -1px -1px 0 #524f4f,  
+    1px -1px 0 #524f4f,
+   -1px 1px 0 #524f4f,
+    1px 1px 0 #524f4f;
   }
 
-  .spot{
-    color: #ffffff;
+  .spot #header{
+    border-bottom: 2.5px solid #ffffff;
+    text-shadow:
+   -1px -1px 0 #524f4f,  
+    1px -1px 0 #524f4f,
+   -1px 1px 0 #524f4f,
+    1px 1px 0 #524f4f;    
+    padding-bottom: 31px;
+
   }
 
-  .spot h1 a{
-    font-size: 50px;
+    .spot #subheader{
+    padding-top: 10px;
+    border-radius: 4px;
+    padding-bottom: 10px;    
+    height: 130px;  
+    
+  }
+
+  .spot #title{
+    float: left;
+    width:40%;    
+    margin-left: 20px;
+    margin-top: 35px;
+ 
+  }
+
+  .spot h1{
+    font-size: 50px; 
+    text-align: left;     
   }
 
   .spot a{
-    color: #e9f1ed;
+    color: #ffffff;
     text-decoration: none;
+  }
+
+  .spot h1 img{
+    width: 1em;
+    margin-left: 2px;
+    padding:1px 2px 1px 2px;
+    background-color: #ffffff;
+    border:1.2px solid #524f4f;
+    border-radius: 2px;    
   }
 
   .spot a:hover{
     color: #dfb8b8;
   }
 
+  .spot #logo{
+    float: left;
+    text-align:right;
+    width: 40%;
+  }
+
+  .spot #logo img{
+    width: 200px;     
+    box-shadow: 
+    -1px -1px 0 #524f4f,  
+    1px -1px 0 #524f4f,
+   -1px 1px 0 #524f4f,
+    1px 1px 0 #524f4f;
+  }
+  
   .slidedown{
     transform: translateY(0);
   }
@@ -103,8 +166,13 @@ export default {
     height: 20px;
   }
 
-  .space.single{
-    height: 10px;
+  .space_single{
+    padding-top: 15px;
+    clear: both;   
+  }
+
+  .space_single p{    
+    text-align: center;
   }
 
   .view{

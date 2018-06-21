@@ -1,7 +1,6 @@
 <template>
   <div class="root">
     <div class="space"></div>
-    <div class="space"></div>
     <!-- Tags -->
     <!-- <ul class="tags">
       <li v-on:click="setTag">vuex</li>
@@ -167,8 +166,8 @@ export default {
   }
 
   .video .thumb{
-    width: 100%;
-    height: 140px;
+    width: 75%;
+    height: 140px;    
     border-radius: 3px;
     background-size: cover;
   }
