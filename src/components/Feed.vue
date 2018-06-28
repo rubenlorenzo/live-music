@@ -48,6 +48,7 @@
 
 <script>
 import moment from 'moment';
+import {youtubeApiKey} from '../../config/apis.js'
 
 export default {
   name: 'Feed',
@@ -85,7 +86,7 @@ export default {
   methods: {
     getVideos() {
       // Config options
-      const KEY = 'AIzaSyBlSc4Zavlls-c_K2cESn1jyuiUSckHgwM';
+      const KEY = youtubeApiKey;
       const OPTS = `part=snippet&type=video&q=6+Music+Live+Room NPR+Music+Tiny+Desk+Concert Live+on+KEXP${this.genTags}&maxResults=50`;
       const BASE_URL = `https://www.googleapis.com/youtube/v3/search?&${OPTS}&key=${KEY}`;
 
