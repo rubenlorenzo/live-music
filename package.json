@@ -1,8 +1,8 @@
 {
-  "name": "vuetube",
+  "name": "live-music",
   "version": "0.0.2",
-  "description": " Video resources that will help you to improve your Vue skills",
-  "author": "Firmino Changani <flowck96@gmail.com>",
+  "description": "Compilation of live music videos",
+  "author": "ruben lorenzo",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
