@@ -1,9 +1,15 @@
-# vuetube
+# Live music
 
 A SPA that fetch Video resources from Youtube using Youtube Data API 3 and Vuejs for the rendering part.
 
 ## Build Setup
+``` javascript
+// add file  /config/api.js
 
+module.exports = {    
+    youtubeApiKey: '....'   
+}
+```
 ``` bash
 # install dependencies
 npm install
