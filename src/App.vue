@@ -1,7 +1,8 @@
 <template>
   <div class="root">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <div class="spot">
-      <div class="wrap" id="header">
+      <div class="wrap" id="header">        
         <div id="subheader">
             <div id="logo">
             <img src="../static/live-music.jpg" alt="">
@@ -114,8 +115,9 @@ export default {
   .spot #title{
     float: left;
     width:40%;    
-    margin-left: 20px;
+    margin-left: 35px;
     margin-top: 35px;
+    font-family: 'Lobster'
  
   }
 
