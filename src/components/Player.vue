@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import {youtubeApiKey} from '../../config/apis.js'
+
 export default {
   name: 'Player',
   data() {
@@ -16,7 +18,7 @@ export default {
   },
   created() {
     // Config options
-    const KEY = 'AIzaSyBlSc4Zavlls-c_K2cESn1jyuiUSckHgwM';
+    const KEY = youtubeApiKey;
     const OPTS = `part=player&id=${this.$route.params.id}`;
     const BASE_URL = `https://www.googleapis.com/youtube/v3/videos?&${OPTS}&key=${KEY}`;
 
