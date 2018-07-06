@@ -4,7 +4,7 @@ A SPA that fetch Video resources from Youtube using Youtube Data API 3 and Vuejs
 
 ## Build Setup
 ``` javascript
-// add file  /config/api.js
+// add file  /config/apis.js
 
 module.exports = {    
     youtubeApiKey: '....'   
