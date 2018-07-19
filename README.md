@@ -7,7 +7,8 @@ A SPA that fetch Video resources from Youtube using Youtube Data API 3 and Vuejs
 // add file  /config/apis.js
 
 module.exports = {    
-    youtubeApiKey: '....'   
+    youtubeApiKey: '....',
+    ganalytics: 'UA-....-.'
 }
 ```
 ``` bash
