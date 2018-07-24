@@ -30,6 +30,9 @@ export default {
       })
       .catch((err) => { this.err = err; });
   },
+  metaInfo: {
+    title: 'Player',    
+  }
 };
 </script>
 

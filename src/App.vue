@@ -9,7 +9,7 @@
           </div>      
           <div id="title">        
             <h1>
-              <router-link to="/" title="vuetube">
+              <router-link to="/" title="live-music">
                 Live music <span><img src="../static/radio.png" alt=""></span>
               </router-link>
             </h1>                 
@@ -39,6 +39,10 @@ export default {
       document.querySelector(".spot")
         .classList.add('slidedown');
     }, 500);
+  },
+  metaInfo:{
+    title: 'live-music',
+    titleTemplate: '%s | Live music on the radio'
   },
 };
 </script>

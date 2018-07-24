@@ -121,6 +121,9 @@ export default {
       }
     },
   },
+  metaInfo: {
+    title: 'Feed',    
+  }
 };
 </script>
 
