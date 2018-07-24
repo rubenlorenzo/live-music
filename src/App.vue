@@ -4,7 +4,7 @@
     <div class="spot">
       <div class="wrap" id="header">        
         <div id="subheader">
-            <div id="logo">
+          <div id="logo">
             <img src="../static/live-music.jpg" alt="">
           </div>      
           <div id="title">        
@@ -108,7 +108,7 @@ export default {
 
   }
 
-    .spot #subheader{
+  .spot #subheader{
     padding-top: 10px;
     border-radius: 4px;
     padding-bottom: 10px;    
@@ -183,6 +183,19 @@ export default {
 
   .view{
     margin-top: 300px;
+  }
+
+  @media screen and (max-width: 800px) { 
+    .spot #logo { 
+      visibility: hidden; 
+      width: 25%;
+      text-align: center;
+    }
+
+    .spot h1 { 
+      font-size: 38px; 
+      margin: auto;
+    }
   }
 </style>
 
