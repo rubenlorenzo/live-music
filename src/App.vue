@@ -74,6 +74,7 @@ export default {
 
   .wrap{
     width: 80%;
+    max-width: 1500px;
     margin: 0 auto;    
   }
 

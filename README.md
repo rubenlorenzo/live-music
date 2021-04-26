@@ -8,7 +8,6 @@ A SPA that fetch Video resources from Youtube using Youtube Data API 3 and Vuejs
 
 module.exports = {    
     youtubeApiKey: '....',
-    ganalytics: 'UA-....-.'
 }
 ```
 ``` bash
